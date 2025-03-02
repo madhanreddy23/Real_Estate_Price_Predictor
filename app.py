@@ -71,9 +71,3 @@ if st.button("Predict Price"):
 
     st.success(f"Predicted Price (Random Forest): ₹{price_rf:.2f} Lakhs")
     st.success(f"Predicted Price (Gradient Boosting): ₹{price_gb:.2f} Lakhs")
-
-    # Feature Importance
-    st.subheader("Feature Importance - Random Forest")
-    fig, ax = plt.subplots()
-    sns.barplot(x=rf_model.feature_importances_, y=X.columns, ax=ax)
-    st.pyplot(fig)
